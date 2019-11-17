@@ -20,3 +20,70 @@
 .App-link {
   color: #09d3ac;
 }
+
+.syn {
+  background-color: darkseagreen;
+}
+
+.ant {
+  background-color: red;
+}
+input[type="text"]:focus {
+  border: 2px solid rgba(85, 85, 85, 0.5);
+}
+
+.syn > h5,
+.ant > h5 {
+  margin: 0;
+}
+div.card-header > h5,
+p.font-italic {
+  display: inline;
+}
+.card {
+  margin: 0 auto;
+  max-width: 80%;
+  margin-bottom: 0.5rem;
+}
+.img-spot {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 9;
+}
+.img-spot p {
+  margin: 0;
+  font-size: 1.1rem;
+}
+p {
+  font-family: "Rubik", sans-serif;
+}
+.col-md-4 > p {
+  text-align: left;
+  margin-bottom: 0;
+  font-family: "Rubik", sans-serif;
+}
+.card-header,
+.card-body {
+  padding: 0.25rem 0.55rem;
+}
+a {
+  text-decoration: none;
+  font-weight: 400;
+  color: #fff;
+  font-family: "Rubik", sans-serif;
+}
+h1 {
+  font-family: "Quicksand", sans-serif;
+}
+a:hover {
+  text-decoration: none;
+  color: #fff;
+}
+a > li:hover {
+  box-shadow: -10px -10px 50px 4px rgba(0, 0, 0, 0.5) inset;
+}
+
+li.list-group-item {
+  padding: 0;
+}
