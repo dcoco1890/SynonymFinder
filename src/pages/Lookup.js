@@ -29,8 +29,6 @@ class Lookup extends React.Component {
                     data: []
                 })
             } else {
-                console.log(resp)
-                console.log(resp.data[0].meta.syns)
                 this.setState({
                     notFound: false,
                     data: resp.data, 
