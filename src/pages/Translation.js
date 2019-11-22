@@ -17,12 +17,27 @@ class Translation extends React.Component {
   handleClick = e => {
     //click stuff for translations
     e.preventDefault();
-    API.getTrans(this.state.word).then(resp => {
-      console.log(resp.data);
-      this.setState({
-        data: resp.data
+    API.getTrans(this.state.word)
+      .then(resp => {
+        if (typeof resp.data[0] === "string") {
+          this.setState({
+            notFound: true,
+            data: []
+          });
+        } else {
+          this.setState({
+            notFound: false,
+            data: resp.data
+          });
+        }
+      })
+      .catch(err => {
+        console.log(err);
+        this.setState({
+          notFound: true,
+          data: []
+        });
       });
-    });
   };
 
   // input stuff
@@ -46,7 +61,7 @@ class Translation extends React.Component {
         />
         {this.state.notFound && (
           <small className="form-text text-muted text-uppercase font-weight-bold">
-            Work in progress, Check back soon!
+            Nothing found, did you spell everything correctly?
           </small>
         )}
         <div className="container">
@@ -55,7 +70,9 @@ class Translation extends React.Component {
               <EngSpan
                 srclan={item.meta.lang === "en" ? "English" : "Spanish"}
                 translan={item.meta.lang === "en" ? "Spanish" : "English"}
+                speechPart={item.fl}
                 word={item.hwi.hw}
+                defs={item.shortdef}
               />
             );
           })}
