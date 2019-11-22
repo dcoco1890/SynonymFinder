@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c1f8192af9258b72f09ae7edbf4f78ea",
+    "revision": "767ac9d3fada7eadec93208a1894ac4d",
     "url": "/SynonymFinder/index.html"
   },
   {
-    "revision": "3aeb4ecff1aab693eafe",
-    "url": "/SynonymFinder/static/css/main.53c671ff.chunk.css"
+    "revision": "4ec4088434f1cb7feb36",
+    "url": "/SynonymFinder/static/css/main.bf29ea45.chunk.css"
   },
   {
-    "revision": "e2acf8bb6ac39569e2e0",
-    "url": "/SynonymFinder/static/js/2.aa5f73ab.chunk.js"
+    "revision": "13712dd81c16013ff421",
+    "url": "/SynonymFinder/static/js/2.c312dfa4.chunk.js"
   },
   {
-    "revision": "3aeb4ecff1aab693eafe",
-    "url": "/SynonymFinder/static/js/main.12575496.chunk.js"
+    "revision": "4ec4088434f1cb7feb36",
+    "url": "/SynonymFinder/static/js/main.beb41ff9.chunk.js"
   },
   {
     "revision": "cc3fd419f54185804331",
