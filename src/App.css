@@ -87,3 +87,28 @@ a > li:hover {
 li.list-group-item {
   padding: 0;
 }
+
+@media only screen and (max-width: 900px) {
+  div.img-spot {
+    transform: scale(0.8);
+    right: -1.2rem;
+    bottom: -1.2rem;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  div.card {
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 486px) {
+  label > h1.pr-2 {
+    text-align: left;
+    padding-left: 0.5rem;
+    font-size: 1.4rem;
+  }
+  div.img-spot {
+    display: none;
+  }
+}
