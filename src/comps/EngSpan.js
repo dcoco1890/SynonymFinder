@@ -1,5 +1,4 @@
 import React from "react";
-import arrow from "../img/right.png";
 
 const styles = {
   head: {
@@ -8,7 +7,7 @@ const styles = {
   },
   main: {
     display: "grid",
-    gridTemplateColumns: "1fr 1fr 1fr"
+    gridTemplateColumns: "1fr 1fr"
   },
   arrow: {
     margin: "0 auto",
@@ -23,33 +22,29 @@ const styles = {
   flexcen: {
     display: "flex",
     justifyContent: "center"
+  },
+  p: {
+    display: "inline"
   }
 };
 
-const Untranslated = ({ word, speechPart }) => (
+const Untranslated = ({ word, speechPart}) => (
   <div>
     <h3>{word}</h3>
     <p className="font-italic">{speechPart}</p>
+   
   </div>
 );
 
 const Translated = props => {
   return (
-      <div>
-          {props.words.map(word => (
-              word
-          ))}
-      </div>
-  )
-  
-
+    <div>
+      {props.words.map(word => (
+        <h5>{word}</h5>
+      ))}
+    </div>
+  );
 };
-
-const Img = ({ pic }) => (
-  <div style={styles.flexcen}>
-    <img src={pic} style={styles.arrow} />
-  </div>
-);
 
 const EngSpan = props => (
   <div className="card">
@@ -58,8 +53,12 @@ const EngSpan = props => (
       <h5 style={styles.right}>{props.translan}</h5>
     </div>
     <div className="card-body" style={styles.main}>
-      <Untranslated word={props.word} speechPart={props.speechPart} />
-      <Img pic={arrow} />
+      <Untranslated
+        word={props.word}
+        speechPart={props.speechPart}
+      
+      />
+
       <Translated words={props.defs} />
     </div>
   </div>

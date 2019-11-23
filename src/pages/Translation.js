@@ -19,6 +19,7 @@ class Translation extends React.Component {
     e.preventDefault();
     API.getTrans(this.state.word)
       .then(resp => {
+        console.log(resp.data);
         if (typeof resp.data[0] === "string") {
           this.setState({
             notFound: true,
