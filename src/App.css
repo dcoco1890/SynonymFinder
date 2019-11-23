@@ -22,11 +22,12 @@
 }
 
 .syn {
-  background-color: darkseagreen;
+  background-color: #99ff99;
 }
 
 .ant {
-  background-color: red;
+  background-color: #CC3366
+  ;
 }
 input[type="text"]:focus {
   border: 2px solid rgba(85, 85, 85, 0.5);
@@ -54,6 +55,7 @@ p.font-italic {
 .img-spot p {
   margin: 0;
   font-size: 1.1rem;
+  text-align: center;
 }
 p {
   font-family: "Rubik", sans-serif;
@@ -70,8 +72,9 @@ p {
 a {
   text-decoration: none;
   font-weight: 400;
-  color: #fff;
+  color: #f9f9f9;
   font-family: "Rubik", sans-serif;
+  text-shadow: 1px 1px 2px #000;
 }
 h1 {
   font-family: "Quicksand", sans-serif;
@@ -99,6 +102,11 @@ li.list-group-item {
 @media only screen and (max-width: 640px) {
   div.card {
     margin: 0;
+  }
+  label > h1.pr-2 {
+    text-align: left;
+    padding-left: 0.5rem;
+    font-size: 1.4rem;
   }
 }
 

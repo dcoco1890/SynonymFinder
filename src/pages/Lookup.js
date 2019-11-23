@@ -67,20 +67,23 @@ class Lookup extends React.Component {
         )}
         <div className="container">
           {this.state.data.map(item => (
-            <TotalCard
-              word={item.hwi.hw}
-              part={item.fl}
-              short={item.shortdef}
-              key={item.meta.uuid}
-            >
-              <Stem stems={item.meta.stems} />
-              <SynAntList syns={item.meta.syns[0]} />
-              <SynAntList
-                ants={
-                  item.meta.ants.length ? item.meta.ants[0] : this.state.ants
-                }
-              />
-            </TotalCard>
+            <div>
+              <hr className="my-4" />
+              <TotalCard
+                word={item.hwi.hw}
+                part={item.fl}
+                short={item.shortdef}
+                key={item.meta.uuid}
+              >
+                <Stem stems={item.meta.stems} />
+                <SynAntList syns={item.meta.syns[0]} />
+                <SynAntList
+                  ants={
+                    item.meta.ants.length ? item.meta.ants[0] : this.state.ants
+                  }
+                />
+              </TotalCard>
+            </div>
           ))}
         </div>
         <ImgMW />
