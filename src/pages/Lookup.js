@@ -1,8 +1,6 @@
 import React from "react";
 import API from "../utils/API";
-import Stem from "../comps/Stem";
 import TotalCard from "../comps/TotalCard";
-import SynAntList from "../comps/SynAntList";
 import ImgMW from "../comps/ImgMW";
 import InForm from "../comps/InForm";
 
@@ -74,15 +72,12 @@ class Lookup extends React.Component {
                 part={item.fl}
                 short={item.shortdef}
                 key={item.meta.uuid}
-              >
-                <Stem stems={item.meta.stems} />
-                <SynAntList syns={item.meta.syns[0]} />
-                <SynAntList
-                  ants={
-                    item.meta.ants.length ? item.meta.ants[0] : this.state.ants
-                  }
-                />
-              </TotalCard>
+                stems={item.meta.stems}
+                syns={item.meta.syns[0   ]}
+                ants={
+                  item.meta.ants.length ? item.meta.ants[0] : this.state.ants
+                }
+              />
             </div>
           ))}
         </div>

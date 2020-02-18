@@ -1,32 +1,34 @@
 import React from "react";
 import Button from "../comps/Button";
+import styled from "styled-components";
 
-const style = {
-  form: {
-    marginTop: "6rem"
-  },
-  marg: {
-    margin: "0 auto"
-  }
-};
+const StyledForm = styled.form`
+  margin-top: 6rem;
+  position: relative;
+`;
 
-const InForm = props => (
-  <form style={style.form} className="form-inline">
-    <label
-      style={style.marg}
-      className="d-flex align-items-center justify-content-center mb-3"
-    >
-      <h1 className="pr-2">{props.page}</h1>
+const StyledLabel = styled.label`
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+`;
+
+const InForm = ({ page, value, handleChange, handleClick }) => (
+  <StyledForm className="form-inline">
+    <StyledLabel>
+      <h1 className="pr-2">{page}</h1>
       <input
         type="text"
-        value={props.value}
+        value={value}
         name="word"
         className="form-control"
-        onChange={props.handleChange}
-      />
-      <Button onClick={props.handleClick} />
-    </label>
-  </form>
+        onChange={handleChange}
+      />{" "}
+      <Button onClick={handleClick} />
+    </StyledLabel>
+  </StyledForm>
 );
 
 export default InForm;
