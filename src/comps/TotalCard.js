@@ -19,12 +19,22 @@ const Heading = styled.h5`
 
 const Paragraph = styled.p`
   font-style: italic;
+  display: inline;
+`;
+
+const StyleButt = styled.button`
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid #212529;
+  float: right;
+  margin-top: 0.25rem;
+  margin-right: 0.25rem;
 `;
 
 const TotalCard = props => (
   <div className="card">
     <StyledDiv>
-      {/* word passed from setWord state*/}
+      <StyleButt onClick={props.close}>X</StyleButt>
       <Heading>{props.word}</Heading>{" "}
       <Paragraph className="font-italic">({props.part})</Paragraph>{" "}
       <ShortDef def={props.short} />

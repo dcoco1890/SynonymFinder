@@ -9,40 +9,43 @@ const Translation = () => {
   const [query, setQuery] = useState("");
   const [data, setData] = useState([]);
   const [notFound, setNotFound] = useState(false);
-  // Not sure if this is the right way to do this, but I did not want the API to get run until the user clicks
-  const [run, unRun] = useState(false);
+  // stops useeffect from running before query
+  const [shouldCall, unShouldCall] = useState(false);
+
+  // Defining Handlers to make components below cleaner looking
+  const handleChange = e => {
+    e.preventDefault();
+    setWord(e.target.value);
+  };
+  const handleClick = e => {
+    e.preventDefault();
+    setQuery(word);
+    unShouldCall(true);
+    setWord("");
+  };
 
   useEffect(() => {
-    if (run) {
+    if (shouldCall) {
       API.getTrans(query)
         .then(resp => {
           if (typeof resp.data[0] === "string") {
             setNotFound(true);
           } else {
-            console.log(resp.data);
             setNotFound(false);
             setData(resp.data);
           }
         })
         .catch(err => console.log(err));
     }
-  }, [run, query]);
+  }, [shouldCall, query]);
 
   return (
     <div>
       <InForm
         page={"Translation: "}
         value={word}
-        handleChange={e => {
-          e.preventDefault();
-          setWord(e.target.value);
-        }}
-        handleClick={e => {
-          e.preventDefault();
-          unRun(true);
-          setQuery(word);
-          setWord("");
-        }}
+        handleChange={handleChange}
+        handleClick={handleClick}
       />
       {notFound && (
         <small className="form-text text-muted text-uppercase font-weight-bold">
@@ -58,6 +61,7 @@ const Translation = () => {
             speechPart={item.fl}
             word={item.hwi.hw}
             defs={item.shortdef}
+            key={item.meta.uuid}
           />
         );
       })}
