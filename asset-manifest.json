@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/SynonymFinder/static/css/main.377f4a4a.chunk.css",
-    "main.js": "/SynonymFinder/static/js/main.05c4004e.chunk.js",
-    "main.js.map": "/SynonymFinder/static/js/main.05c4004e.chunk.js.map",
+    "main.css": "/SynonymFinder/static/css/main.29f4c767.chunk.css",
+    "main.js": "/SynonymFinder/static/js/main.e8c501c6.chunk.js",
+    "main.js.map": "/SynonymFinder/static/js/main.e8c501c6.chunk.js.map",
     "runtime-main.js": "/SynonymFinder/static/js/runtime-main.ee9eea2c.js",
     "runtime-main.js.map": "/SynonymFinder/static/js/runtime-main.ee9eea2c.js.map",
-    "static/js/2.efc86a56.chunk.js": "/SynonymFinder/static/js/2.efc86a56.chunk.js",
-    "static/js/2.efc86a56.chunk.js.map": "/SynonymFinder/static/js/2.efc86a56.chunk.js.map",
+    "static/js/2.c389003b.chunk.js": "/SynonymFinder/static/js/2.c389003b.chunk.js",
+    "static/js/2.c389003b.chunk.js.map": "/SynonymFinder/static/js/2.c389003b.chunk.js.map",
     "index.html": "/SynonymFinder/index.html",
-    "precache-manifest.406ee36392bdbbb291468cde5944f7b6.js": "/SynonymFinder/precache-manifest.406ee36392bdbbb291468cde5944f7b6.js",
+    "precache-manifest.f6e265e1355958faa64d6541f4a79825.js": "/SynonymFinder/precache-manifest.f6e265e1355958faa64d6541f4a79825.js",
     "service-worker.js": "/SynonymFinder/service-worker.js",
-    "static/css/main.377f4a4a.chunk.css.map": "/SynonymFinder/static/css/main.377f4a4a.chunk.css.map",
+    "static/css/main.29f4c767.chunk.css.map": "/SynonymFinder/static/css/main.29f4c767.chunk.css.map",
     "static/media/mwlogo.jpg": "/SynonymFinder/static/media/mwlogo.f5d951bd.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.ee9eea2c.js",
-    "static/js/2.efc86a56.chunk.js",
-    "static/css/main.377f4a4a.chunk.css",
-    "static/js/main.05c4004e.chunk.js"
+    "static/js/2.c389003b.chunk.js",
+    "static/css/main.29f4c767.chunk.css",
+    "static/js/main.e8c501c6.chunk.js"
   ]
 }
